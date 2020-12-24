@@ -1,20 +1,38 @@
 <template>
   <div>
-    <nav class="bg-gradient-to-r from-purple-500 to-indigo-400">
-      <div class="flex items-center justify-between">
-        <div class="text-white antialiased font-semibold uppercase whitespace-nowrap text-lg p-3">
+    <nav class="bg-gradient-to-r from-gray-400 to-gray-500">
+      <div class="block lg:flex items-center justify-between">
+        <div class="text-white antialiased font-semibold uppercase whitespace-nowrap text-lg pl-5">
           lerada
         </div>
-        <div class="flex items-center">
-          <router-link class="text-white hover:bg-indigo-500 p-4" to="/">home</router-link>
-          <router-link class="text-white hover:bg-indigo-500 p-4" to="/product/me">produk saya</router-link>
-          <router-link class="text-white hover:bg-indigo-500 p-4" to="/product/me">
-            <svg class="w-5  h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
+        <div class="block lg:flex lg:items-center ">
+          <router-link class="text-white hover:bg-gray-600 p-4 capitalize" to="/">home</router-link>
+          <router-link class="text-white hover:bg-gray-600 p-4 capitalize" to="/product/me">produk saya</router-link>
+          <router-link class="text-white hover:bg-gray-600 p-4 capitalize" to="/product/me">
+            <div class="static">
+              <div><IconCart/> </div>
+              <div class="bg-gray-600 p-1 rounded text-xs absolute top-1 right-14">1</div>
+            </div>
+          </router-link>
+          <router-link class="text-white hover:bg-gray-600 p-4 capitalize" to="/product/me">
+          <IconUser/>
           </router-link>
         </div>
       </div>
     </nav>
   </div>
 </template>
+
+
+<script>
+
+import IconUser from '@/components/IconUser.vue'
+import IconCart from '@/components/IconCart.vue'
+
+export default {
+  components:{
+    IconUser,
+    IconCart
+  }
+}
+</script>

@@ -1,8 +1,23 @@
 <template>
-    <div class="container mx-auto">
-        <div class="flex bg-gray-200 rounded my-20">
-            aa
+    <div>
+        <div class="flex justify-items-center">
+            <div class="bg-gray-200 rounded-xl m-5 mb-10" v-for="product in products" :key="product.id">
+                <img class="w-72 rounded-t-xl" src="https://images.unsplash.com/photo-1548138081-d02590416982?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=836&q=80" alt="">
+                <div class="p-3">
+                    <div class="text-gray-800 text-lg font-semibold font-sans">{{ product.name }}</div>
+                    <div class="text-gray-700 text-sm font-sans">{{ product.price }}</div>
+                </div>
+                <div class="flex justify-end bg-gray-300 p-2 rounded-b-xl">
+                    <router-link to="" class="bg-gray-500 hover:bg-gray-600 text-white text-sm py-2 px-4 rounded">beli</router-link>
+                </div>
+            </div>
         </div>
-        <img class="w-52 " src="https://images.unsplash.com/photo-1548138081-d02590416982?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=836&q=80" alt="">
     </div>
 </template>
+
+<script>
+export default {
+    props: ['products'],
+    
+}
+</script>
