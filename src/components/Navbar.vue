@@ -7,7 +7,7 @@
         </div>
         <div class="block lg:flex lg:items-center ">
           <router-link class="text-white hover:bg-gray-600 p-4 capitalize" to="/">home</router-link>
-          <router-link class="text-white hover:bg-gray-600 p-4 capitalize" to="/product/me">produk saya</router-link>
+          <router-link class="text-white hover:bg-gray-600 p-4 capitalize" :to="{ name:'product.me' }">produk saya</router-link>
           <router-link class="text-white hover:bg-gray-600 p-4 capitalize" to="/product/me">
             <div class="static">
               <div><IconCart/> </div>

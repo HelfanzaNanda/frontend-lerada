@@ -4,7 +4,7 @@
 
     <div class="text-center text-2xl mt-10 pb-5  font-semibold">Produk Sering Dibeli</div>
     <div class="container mx-auto flex justify-end ml-5 mb-5">
-      <router-link to="/product" class="bg-gray-500 hover:bg-gray-600 py-2 px-3 capitalize rounded text-white">lihat semua</router-link>
+      <router-link :to="{name: 'product.all'}" class="bg-gray-500 hover:bg-gray-600 py-2 px-3 capitalize rounded text-white">lihat semua</router-link>
     </div>
     <div class="container mx-auto">
       <CardProduct :products="products"/>
