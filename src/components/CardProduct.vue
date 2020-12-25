@@ -1,6 +1,6 @@
 <template>
     <div >
-        <div class="flex f flex-col lg:flex-row items-center lg:justify-items-center">
+        <div class="flex flex-col lg:flex-row items-center lg:justify-items-center">
             <div class="bg-indigo-100 rounded-xl lg:m-5 mb-10" v-for="product in products" :key="product.id">
                     <img class="w-52 lg:w-96 rounded-t-xl" src="https://images.unsplash.com/photo-1548138081-d02590416982?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=836&q=80" alt="">
                     <div class="p-3">
