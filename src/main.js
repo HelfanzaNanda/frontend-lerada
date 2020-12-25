@@ -5,7 +5,7 @@ import Toasted from 'vue-toasted';
 import "tailwindcss/tailwind.css"
 import axios from 'axios'
 
-axios.defaults.baseURL = "http://localhost:8000/api/"
+axios.defaults.baseURL = "https://api-lerada.herokuapp.com/api/"
 Vue.config.productionTip = false
 Vue.use(Toasted)
 
