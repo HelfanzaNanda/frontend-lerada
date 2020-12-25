@@ -2,7 +2,7 @@
   <div class="bg-gradient-to-br from-purple-500 to-indigo-400 dark:from-gray-900 dark:to-black"> 
     <div class="flex flex-col lg:flex-row justify-between">
       <div
-        class="flex justify-between items-center px-4 py-4 lg:py-0 border-b border-purple-400 lg:border-0"
+        class="flex justify-between items-center px-4 py-4 lg:py-0 border-b dark:border-gray-600 border-purple-400 lg:border-0"
       >
         <div>
           <router-link
@@ -113,7 +113,14 @@ export default {
   },
 
   mounted(){
-    document.querySelector('html').classList.add(localStorage.getItem('theme'))
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+       document.querySelector('html').classList.add('dark')
+    } else {
+      document.querySelector('html').classList.remove('dark')
+    }
+
+    localStorage.removeItem('theme')
+    //document.querySelector('html').classList.add(localStorage.getItem('theme'))
     
   },
 
