@@ -1,14 +1,21 @@
 <template>
   <div>
-    <div class="bg-gray-200"><Banner/></div>
+    <Banner/>
+    <div class="p-10">
+      <div class="justify-center flex text-2xl mt-10 pb-5 font-semibold">Produk Sering Dibeli</div>
+    
+      <div class="flex justify-center lg:justify-end lg:ml-5 lg:mb-5">
+        <router-link :to="{name: 'product.all'}" class="bg-gray-500 hover:bg-gray-600 py-2 px-3 capitalize rounded text-white">lihat semua</router-link>
+      </div>
+      <!-- <div class="container mx-auto">
+        <CardProduct :products="products"/>
+      </div> -->
 
-    <div class="text-center text-2xl mt-10 pb-5  font-semibold">Produk Sering Dibeli</div>
-    <div class="container mx-auto flex justify-end ml-5 mb-5">
-      <router-link :to="{name: 'product.all'}" class="bg-gray-500 hover:bg-gray-600 py-2 px-3 capitalize rounded text-white">lihat semua</router-link>
+      <div class="flex justify-center lg:hidden">
+        <router-link :to="{name: 'product.all'}" class="bg-gray-500 hover:bg-gray-600 py-2 px-3 capitalize rounded text-white">lihat semua</router-link>
+      </div>
     </div>
-    <div class="container mx-auto">
-      <CardProduct :products="products"/>
-    </div>
+    
     
   </div>
 
@@ -17,7 +24,7 @@
 <script>
 
 import Banner from '@/components/Banner.vue'
-import CardProduct from '@/components/CardProduct.vue'
+//import CardProduct from '@/components/CardProduct.vue'
 import axios from 'axios'
 
 export default {
@@ -25,7 +32,7 @@ export default {
   
   components: {
     Banner,
-    CardProduct
+    //CardProduct,
   },
 
   data() {

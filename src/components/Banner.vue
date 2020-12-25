@@ -1,24 +1,23 @@
 <template>
-  <div class="container mx-auto">
-    <div class="flex justify-between items-center">
-      <div class="mb-20 w-full text-center">
-        <div class="text-gray-800 font-bold text-3xl">Semua Produk Ada</div>
-        <div class="text-gray-700">produk dengan harga murah</div>
+  <div class="bg-gray-200">
+    <div class="flex flex-col lg:flex-row justify-between p-10 items-center">
+      <div class="text-center lg:w-full lg:mb-10">
+        <div class="text-gray-800 text-3xl font-bold text-center">Handphone Murah</div>
+        <div class="text-gray-700 text-center">hp dengan harga murah</div>
       </div>
-      <div class="py-10">
+      <div class="justify-center">
         <ImageBanner/>
       </div>
     </div>
-    <div></div>
   </div>
+
 </template>
 
 <script>
-import ImageBanner from '@/components/ImageBanner.vue'
+import ImageBanner from "@/components/ImageBanner.vue";
 export default {
-    components:{
-        
-        ImageBanner
-    }
-}
+  components: {
+    ImageBanner,
+  },
+};
 </script>
